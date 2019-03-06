@@ -1,4 +1,8 @@
-﻿using System;
+﻿using ClassesExample.Legos;
+using ClassesExample.Legos.Heads;
+using ClassesExample.Legos.Legs;
+using ClassesExample.Legos.Torsos;
+using System;
 
 namespace ClassesExample
 {
@@ -12,13 +16,26 @@ namespace ClassesExample
             //taffy.Rating = 5;
             //taffy.Type = CandyType.Stretchy;
 
-            var taffy = new Candy("Orange", "Orange Saltwater Taffy", CandyType.Stretchy);
-            taffy.SetRating(4);
+            //var taffy = new Candy("Orange", "Orange Saltwater Taffy", CandyType.Stretchy);
+            //taffy.SetRating(4);
 
-            Console.WriteLine(taffy);
+            //Console.WriteLine(taffy);
 
-            Console.WriteLine(taffy.Rating);
-            Console.WriteLine("Hello World!");
+            var myDogHead = new Dog();
+
+            myDogHead.Talk();
+
+            var baldyHead = new Bald();
+            var astronaut = new Astronaut();
+
+            var fitTorso = new FitTorso(2,Sex.Male, Legos.Colors.Freckles);
+            fitTorso.Crunch(12);
+
+            var adamsLegs = new OrangeLegs(Length.Short);
+
+            var minifigure = new MiniFigure("Adam", astronaut, fitTorso, adamsLegs);
+            minifigure.Greet();
+
             Console.ReadLine();
         }
     }
